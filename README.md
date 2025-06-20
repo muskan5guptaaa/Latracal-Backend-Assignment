@@ -1,28 +1,56 @@
-# 📚 Bookstore Frontend
+# 📚 Book Review Platform - Backend
 
-A responsive and modern React-based frontend application for browsing and reviewing books. Styled with Tailwind CSS, powered by React Router, and integrated with a backend API.
-
----
-
-## 🚀 Features
-
-- 🏠 Home page with featured books  
-- 📚 Book listing with search functionality  
-- 📖 Individual book detail view with reviews  
-- 🧑 User profile page with user-submitted reviews  
-- ✍️ Review submission with live API interaction  
-- ⚙️ React Context for state management  
-- 🎨 Tailwind CSS for responsive design  
-- 🔄 Axios for API communication  
-- 🧭 React Router for navigation  
-- 🔐 API-based user profile and book data  
+This is the **backend** of the Book Review Platform, built using **Node.js**, **Express.js**, and **MongoDB**. It provides RESTful APIs for managing books, users, and reviews.
 
 ---
 
-## 🛠️ Setup Instructions
+## 🛠 Tech Stack
 
-### 1. Clone the repository
+- Node.js
+- Express.js
+- MongoDB with Mongoose
+- JWT for Authentication
+- dotenv for environment management
+- express-validator for validation
+```
+```
+  ## Deployed Url
+  https://latracal-backend-assignment.onrender.com
+```
+```
+## 📦 Installation & Running the Server
+```
+# Step 1: Navigate to backend
+cd book-api
 
-```bash
-git clone https://your-repo-url.git
-cd bookstore-frontend
+# Step 2: Install dependencies
+npm install
+
+# Step 3: Start server
+npm run dev
+
+Server will run at: http://localhost:5000
+```
+## 🔗 API Endpoints
+📘 Books
+GET /books — Get all books (with pagination)
+
+GET /books/:id — Get single book
+
+POST /books — Add new book (Admin only)
+
+✍️ Reviews
+GET /reviews?bookId=BOOK_ID — Get reviews for a book
+
+POST /reviews — Submit a review
+
+👤 Users
+GET /users/:id — Get user profile
+
+PUT /users/:id — Update user profile
+```
+## ✅ Features
+RESTful API
+JWT-based authentication
+Centralized error handling
+Mongoose schema validation
