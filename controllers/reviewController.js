@@ -7,7 +7,7 @@ exports.getReviews = async (req, res) => {
 };
 
 exports.createReview = async (req, res) => {
-  const review = new Review({ ...req.body, userId: req.user._id });
+  const review = new Review({ ...req.body, userId: req.body.bookId });
   await review.save();
   res.status(201).json(review);
 };
