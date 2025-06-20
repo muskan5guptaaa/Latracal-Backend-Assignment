@@ -4,7 +4,9 @@ const reviewRoutes = require("./routes/reviewRoutes");
 const userRoutes = require("./routes/userRoutes");
 const errorHandler = require("./middlewares/errorHandler");
 
+const cors = require("cors");
 const app = express();
+app.use(cors())
 app.use(express.json());
 const authRoutes = require("./routes/authRoutes");
 app.use("/auth", authRoutes);
